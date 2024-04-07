@@ -1,0 +1,31 @@
+
+sudo yum update -y
+  
+sudo yum install -y git aws-cli
+sudo yum install fontconfig java-17-openjdk -y
+sudo yum install java-17-amazon-corretto-headless -y
+sudo alternatives --config java
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo amazon-linux-extras install epel -y
+sudo yum install daemonize -y
+sudo yum install -y jenkins
+sudo service jenkins start
+sudo service jenkins status
+sudo systemctl enable jenkins
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+bd6d0954f8d444898ab3e836927627b7
+
+jenkins / jenkins
+http://3.86.244.28:8080/
+
+Jenkins forgot password : 
+cd /var/lib/jenkins/
+vi config.xml 
+<useSecurity>true</useSecurity>  --> False -->  Restart Server
+Follow password reset procedure
+
+
+

@@ -1,0 +1,20 @@
+Installing Gradle on amazon Linux
+=================================
+
+sudo yum update -y
+java -version
+
+cd /opt
+
+sudo wget https://services.gradle.org/distributions/gradle-8.6-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-8.6-bin.zip
+ls -lhr
+cd /opt/gradle/gradle-8.6
+
+export GRADLE_HOME=/opt/gradle/gradle-8.6
+export PATH=$GRADLE_HOME/bin:$PATH
+
+gradle -version
+echo $GRADLE_HOME
+
+Gradle Home Directoty :/opt/gradle/gradle-8.6

@@ -1,0 +1,23 @@
+Install Ant on Amazon Linux 
+===========================
+
+Sudo yum update -y
+java -version
+
+cd /opt
+
+sudo wget https://dlcdn.apache.org//ant/binaries/apache-ant-1.10.14-bin.tar.gz
+sudo tar -xvzf apache-ant-1.10.14-bin.tar.gz
+ls -lhr
+cd apache-ant-1.10.14/
+
+export ANT_HOME=/opt/apache-ant-1.10.14
+export PATH=$PATH:$ANT_HOME/bin
+
+ant -version
+echo $ANT_HOME
+
+
+Ant Home Directoty : /opt/apache-ant-1.10.14
+
+
