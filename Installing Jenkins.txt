@@ -2,7 +2,6 @@
 sudo yum update -y
   
 sudo yum install -y git aws-cli
-sudo yum install fontconfig java-17-openjdk -y
 sudo yum install java-17-amazon-corretto-headless -y
 sudo alternatives --config java
 
@@ -16,7 +15,7 @@ sudo service jenkins status
 sudo systemctl enable jenkins
 
 cat /var/lib/jenkins/secrets/initialAdminPassword
-bd6d0954f8d444898ab3e836927627b7
+
 
 jenkins / jenkins
 http://3.86.244.28:8080/
